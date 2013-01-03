@@ -7,6 +7,14 @@ QFractionTest::QFractionTest()
 {
 }
 
+void QFractionTest::testCreate()
+{
+    Fraction fraction = Fraction(2, 2);
+
+    QCOMPARE(fraction.getNumerator(), 1);
+    QCOMPARE(fraction.getDenominator(), 1);
+}
+
 void QFractionTest::testSuma()
 {
     Fraction fraction1 = Fraction(1, 2);
@@ -17,12 +25,3 @@ void QFractionTest::testSuma()
     QCOMPARE(fraction1.getNumerator(), 1);
     QCOMPARE(fraction1.getDenominator(), 1);
 }
-
-void QFractionTest::testCreate()
-{
-    Fraction fraction = Fraction(2, 2);
-
-    QCOMPARE(fraction.getNumerator(), 1);
-    QCOMPARE(fraction.getDenominator(), 1);
-}
-

@@ -12,8 +12,8 @@ public:
     QFractionTest();
 
 private Q_SLOTS:
-    void testSuma();
     void testCreate();
+    void testSuma();
 };
 
 #endif // QFRACTIONTEST_H

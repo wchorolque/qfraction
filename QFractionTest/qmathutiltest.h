@@ -13,6 +13,7 @@ public:
 
 private Q_SLOTS:
     void testMCD();
+    void testMCM();
 };
 
 #endif // QMATHUTILTEST_H
