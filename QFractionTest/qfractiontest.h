@@ -14,6 +14,9 @@ public:
 private Q_SLOTS:
     void testCreate();
     void testSuma();
+    void testResta();
+    void testProducto();
+    void testDivision();
 };
 
 #endif // QFRACTIONTEST_H
