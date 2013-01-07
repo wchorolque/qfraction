@@ -15,155 +15,266 @@ void QFractionTest::testCreate()
     QCOMPARE(fraction.getDenominator(), 1);
 }
 
-void QFractionTest::testSuma()
+void QFractionTest::testBinaryOneAddHalf()
 {
     Fraction fraction1 = Fraction(1);
     Fraction fraction2 = Fraction(1, 2);
-    Fraction fraction3 = Fraction(0);
-    Fraction fraction4 = Fraction(1, 2);
 
     Fraction temp = fraction1 + fraction2;
 
     QCOMPARE(temp.getNumerator(), 3);
     QCOMPARE(temp.getDenominator(), 2);
+}
 
-    temp = fraction3 + fraction4;
+void QFractionTest::testBinaryZeroAddHalf()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 + fraction2;
 
     QCOMPARE(temp.getNumerator(), 1);
     QCOMPARE(temp.getDenominator(), 2);
+}
 
-    temp = fraction2 + fraction4;
+void QFractionTest::testBinaryHalfAddHalf()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 + fraction2;
 
     QCOMPARE(temp.getNumerator(), 1);
     QCOMPARE(temp.getDenominator(), 1);
+}
+
+void QFractionTest::testUnaryOneAddHalf()
+{
+    Fraction fraction1 = Fraction(1);
+    Fraction fraction2 = Fraction(1, 2);
 
     fraction1 += fraction2;
 
     QCOMPARE(fraction1.getNumerator(), 3);
     QCOMPARE(fraction1.getDenominator(), 2);
-
-    fraction2 += fraction3;
-
-    QCOMPARE(fraction2.getNumerator(), 1);
-    QCOMPARE(fraction2.getDenominator(), 2);
-
-    fraction3 += fraction4;
-
-    QCOMPARE(fraction3.getNumerator(), 1);
-    QCOMPARE(fraction3.getDenominator(), 2);
-
 }
 
-void QFractionTest::testResta()
+void QFractionTest::testUnaryHalfAddZero()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(0);
+
+    fraction1 += fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), 1);
+    QCOMPARE(fraction1.getDenominator(), 2);
+}
+
+void QFractionTest::testUnaryZeroAddHalf()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    fraction1 += fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), 1);
+    QCOMPARE(fraction1.getDenominator(), 2);
+}
+
+void QFractionTest::testBinaryOneSubtractHalf()
 {
     Fraction fraction1 = Fraction(1);
     Fraction fraction2 = Fraction(1, 2);
-    Fraction fraction3 = Fraction(0);
-    Fraction fraction4 = Fraction(1, 2);
 
     Fraction temp = fraction1 - fraction2;
 
     QCOMPARE(temp.getNumerator(), 1);
     QCOMPARE(temp.getDenominator(), 2);
+}
 
-    temp = fraction3 - fraction4;
+void QFractionTest::testBinaryZeroSubtractHalf()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 - fraction2;
 
     QCOMPARE(temp.getNumerator(), -1);
     QCOMPARE(temp.getDenominator(), 2);
+}
 
-    temp = fraction2 - fraction4;
+void QFractionTest::testBinaryHalfSubtractHalf()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 - fraction2;
 
     QCOMPARE(temp.getNumerator(), 0);
     QCOMPARE(temp.getDenominator(), 1);
+}
+
+void QFractionTest::testUnaryOneSubtractHalf()
+{
+    Fraction fraction1 = Fraction(1);
+    Fraction fraction2 = Fraction(1, 2);
 
     fraction1 -= fraction2;
 
     QCOMPARE(fraction1.getNumerator(), 1);
-    QCOMPARE(fraction2.getDenominator(), 2);
-
-    fraction2 -= fraction3;
-
-    QCOMPARE(fraction2.getNumerator(), 1);
-    QCOMPARE(fraction2.getDenominator(), 2);
-
-    fraction3 -= fraction4;
-
-    QCOMPARE(fraction3.getNumerator(), -1);
-    QCOMPARE(fraction3. getDenominator(), 2);
+    QCOMPARE(fraction1.getDenominator(), 2);
 }
 
-void QFractionTest::testProducto()
+void QFractionTest::testUnaryHalfSubtractZero()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(0);
+
+    fraction1 -= fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), 1);
+    QCOMPARE(fraction1.getDenominator(), 2);
+}
+
+void QFractionTest::testUnaryZeroSubtractHalf()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    fraction1 -= fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), -1);
+    QCOMPARE(fraction1. getDenominator(), 2);
+}
+
+void QFractionTest::testBinaryOneProductHalf ()
 {
     Fraction fraction1 = Fraction(1);
     Fraction fraction2 = Fraction(1, 2);
-    Fraction fraction3 = Fraction(0);
-    Fraction fraction4 = Fraction(1, 2);
 
     Fraction temp = fraction1 * fraction2;
 
     QCOMPARE(temp.getNumerator(), 1);
     QCOMPARE(temp.getDenominator(), 2);
+}
 
-    temp = fraction3 * fraction4;
+void QFractionTest::testBinaryZeroProductHalf ()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 * fraction2;
 
     QCOMPARE(temp.getNumerator(), 0);
     QCOMPARE(temp.getDenominator(), 1);
+}
 
-    temp = fraction2 * fraction4;
+void QFractionTest::testBinaryHalfProductHalf ()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 * fraction2;
 
     QCOMPARE(temp.getNumerator(), 1);
     QCOMPARE(temp.getDenominator(), 4);
+}
+
+void QFractionTest::testUnaryOneProductHalf ()
+{
+    Fraction fraction1 = Fraction(1);
+    Fraction fraction2 = Fraction(1, 2);
 
     fraction1 *= fraction2;
 
     QCOMPARE(fraction1.getNumerator(), 1);
     QCOMPARE(fraction2.getDenominator(), 2);
-
-    fraction3 *= fraction4;
-
-    QCOMPARE(fraction3.getNumerator(), 0);
-    QCOMPARE(fraction3.getDenominator(), 1);
-
-    fraction2 *= fraction4;
-
-    QCOMPARE(fraction2.getNumerator(), 1);
-    QCOMPARE(fraction2.getDenominator(), 4);
 }
 
-void QFractionTest::testDivision()
+void QFractionTest::testUnaryZeroProductHalf ()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    fraction1 *= fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), 0);
+    QCOMPARE(fraction1.getDenominator(), 1);
+}
+
+void QFractionTest::testUnaryHalfProductHalf ()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    fraction1 *= fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), 1);
+    QCOMPARE(fraction1.getDenominator(), 4);
+}
+
+void QFractionTest::testBinaryOneDivideHalf ()
 {
     Fraction fraction1 = Fraction(1);
     Fraction fraction2 = Fraction(1, 2);
-    Fraction fraction3 = Fraction(0);
-    Fraction fraction4 = Fraction(1, 2);
 
     Fraction temp = fraction1 / fraction2;
 
     QCOMPARE(temp.getNumerator(), 2);
     QCOMPARE(temp.getDenominator(), 1);
+}
 
-    temp = fraction3 / fraction4;
+void QFractionTest::testBinaryZeroDivideHalf ()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 / fraction2;
 
     QCOMPARE(temp.getNumerator(), 0);
     QCOMPARE(temp.getDenominator(), 1);
+}
 
-    temp = fraction2 / fraction4;
+void QFractionTest::testBinaryHalfDivideHalf ()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    Fraction temp = fraction1 / fraction2;
 
     QCOMPARE(temp.getNumerator(), 1);
     QCOMPARE(temp.getDenominator(), 1);
+}
+
+void QFractionTest::testUnaryOneDivideHalf ()
+{
+    Fraction fraction1 = Fraction(1);
+    Fraction fraction2 = Fraction(1, 2);
 
     fraction1 /= fraction2;
 
     QCOMPARE(fraction1.getNumerator(), 2);
     QCOMPARE(fraction1.getDenominator(), 1);
+}
 
-    fraction3 /= fraction4;
+void QFractionTest::testUnaryZeroDivideHalf ()
+{
+    Fraction fraction1 = Fraction(0);
+    Fraction fraction2 = Fraction(1, 2);
 
-    QCOMPARE(fraction3.getNumerator(), 0);
-    QCOMPARE(fraction3.getDenominator(), 1);
+    fraction1 /= fraction2;
 
-    fraction2 /= fraction4;
+    QCOMPARE(fraction1.getNumerator(), 0);
+    QCOMPARE(fraction1.getDenominator(), 1);
+}
 
-    QCOMPARE(fraction2.getNumerator(), 1);
-    QCOMPARE(fraction2.getDenominator(), 1);
+void QFractionTest::testUnaryHalfDivideHalf ()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    fraction1 /= fraction2;
+
+    QCOMPARE(fraction1.getNumerator(), 1);
+    QCOMPARE(fraction1.getDenominator(), 1);
 }

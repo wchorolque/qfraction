@@ -13,10 +13,34 @@ public:
 
 private Q_SLOTS:
     void testCreate();
-    void testSuma();
-    void testResta();
-    void testProducto();
-    void testDivision();
+
+    void testBinaryOneAddHalf();
+    void testBinaryZeroAddHalf();
+    void testBinaryHalfAddHalf();
+    void testUnaryOneAddHalf();
+    void testUnaryHalfAddZero();
+    void testUnaryZeroAddHalf();
+
+    void testUnaryZeroSubtractHalf();
+    void testUnaryHalfSubtractZero();
+    void testUnaryOneSubtractHalf();
+    void testBinaryHalfSubtractHalf();
+    void testBinaryZeroSubtractHalf();
+    void testBinaryOneSubtractHalf();
+
+    void testUnaryHalfProductHalf();
+    void testUnaryZeroProductHalf();
+    void testUnaryOneProductHalf();
+    void testBinaryHalfProductHalf();
+    void testBinaryZeroProductHalf();
+    void testBinaryOneProductHalf();
+
+    void testUnaryHalfDivideHalf();
+    void testUnaryZeroDivideHalf();
+    void testUnaryOneDivideHalf();
+    void testBinaryHalfDivideHalf();
+    void testBinaryZeroDivideHalf();
+    void testBinaryOneDivideHalf();
 };
 
 #endif // QFRACTIONTEST_H
