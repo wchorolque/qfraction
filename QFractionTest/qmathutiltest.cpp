@@ -8,6 +8,8 @@ void QMathUtilTest::testMCD()
 {
     QCOMPARE(QMathUtil::calculateMCD(4, 8), 4);
     QCOMPARE(QMathUtil::calculateMCD(6, 9), 3);
+    QCOMPARE(QMathUtil::calculateMCD(-6, 9), 3);
+    QCOMPARE(QMathUtil::calculateMCD(6, -9), 3);
     QCOMPARE(QMathUtil::calculateMCD(15, 24), 3);
 }
 

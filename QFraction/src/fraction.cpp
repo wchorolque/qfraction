@@ -138,3 +138,47 @@ Fraction &Fraction::operator -=(qint32 number)
 
     return *this;
 }
+
+ostream &operator <<(ostream &out, const Fraction &f)
+{
+    out << f.getNumerator() << " / " << f.getDenominator();
+
+    return out;
+}
+
+Fraction operator +(const Fraction &f1, const Fraction &f2)
+{
+    Fraction f = Fraction(0, 1);
+    f += f1;
+    f += f2;
+
+    return f;
+}
+
+Fraction operator -(const Fraction &f1, const Fraction &f2)
+{
+    Fraction f = Fraction(0, 1);
+    f += f1;
+    f -= f2;
+
+    return f;
+}
+
+Fraction operator *(const Fraction &f1, const Fraction &f2)
+{
+    Fraction f = Fraction(1, 1);
+    f *= f1;
+    f *= f2;
+
+    return f;
+}
+
+Fraction operator /(const Fraction &f1, const Fraction &f2)
+{
+    Fraction f = Fraction(1, 1);
+    f *= f1;
+    f /= f2;
+
+    return f;
+}
+

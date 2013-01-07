@@ -6,6 +6,12 @@ QMathUtil::QMathUtil()
 
 qint32 QMathUtil::calculateMCD(qint32 number1, qint32 number2)
 {
+    if (number1 < 0) {
+        number1 = abs(number1);
+    }
+    if (number2 < 0) {
+        number2 = abs(number2);
+    }
     if (0 == number2) {
         return number1;
     } else {
