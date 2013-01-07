@@ -41,6 +41,9 @@ private Q_SLOTS:
     void testBinaryHalfDivideHalf();
     void testBinaryZeroDivideHalf();
     void testBinaryOneDivideHalf();
+
+    void testEqual();
+    void testNotEqual();
 };
 
 #endif // QFRACTIONTEST_H

@@ -21,6 +21,10 @@ Fraction::Fraction(qint32 numerator, qint32 denominator)
     reduce();
 }
 
+Fraction::~Fraction()
+{
+}
+
 void Fraction::setNumerator(qint32 numerator)
 {
     m_Numerator = numerator;
@@ -105,6 +109,29 @@ Fraction &Fraction::operator /=(const Fraction &f)
     reduce();
 
     return *this;
+}
+
+bool Fraction::operator ==(const Fraction &f) const
+{
+    bool equal_numerator = this->getNumerator() == f.getNumerator();
+    bool equal_denominator = this->getDenominator() == f.getDenominator();
+
+    if (equal_numerator && equal_denominator) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool Fraction::operator !=(const Fraction &f) const
+{
+    bool not_equal_numerator = this->getNumerator() != f.getNumerator();
+    bool not_equal_denominator = this->getDenominator() != f.getDenominator();
+    if (not_equal_numerator || not_equal_denominator) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 Fraction &Fraction::operator +=(qint32 number)

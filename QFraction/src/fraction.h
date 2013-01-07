@@ -15,6 +15,7 @@ private:
     void reduce();
 public:
     Fraction(qint32 numerator=0, qint32 denominator=1);
+    ~Fraction();
 
     void setNumerator(qint32 numerator);
     qint32 getNumerator() const;
@@ -31,6 +32,9 @@ public:
     Fraction& operator -=(qint32 number);
     Fraction& operator *=(qint32 number);
     Fraction& operator /=(qint32 number);
+
+    bool operator ==(const Fraction& f) const;
+    bool operator !=(const Fraction& f) const;
 
     friend ostream& operator <<(ostream& out, const Fraction& f);
     friend Fraction operator +(const Fraction& f1, const Fraction& f2);

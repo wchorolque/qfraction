@@ -1,5 +1,5 @@
 #include <QString>
-#include <QtTest>
+#include <QtTest/QtTest>
 
 #include "qfractiontest.h"
 
@@ -278,3 +278,20 @@ void QFractionTest::testUnaryHalfDivideHalf ()
     QCOMPARE(fraction1.getNumerator(), 1);
     QCOMPARE(fraction1.getDenominator(), 1);
 }
+
+void QFractionTest::testEqual()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 2);
+
+    QVERIFY(fraction1 == fraction2);
+}
+
+void QFractionTest::testNotEqual()
+{
+    Fraction fraction1 = Fraction(1, 2);
+    Fraction fraction2 = Fraction(1, 3);
+
+    QVERIFY(fraction1 != fraction2);
+}
+
