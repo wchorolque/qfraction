@@ -27,5 +27,11 @@ void QMathUtilTest::testCountDecimals()
 
     QCOMPARE(decimals, 2);
     QCOMPARE(number, 75.0);
+
+    number = 2.3;
+    decimals = QMathUtil::countDecimals(number);
+
+    QCOMPARE(decimals, 1);
+    QCOMPARE(number, 23.0);
 }
 

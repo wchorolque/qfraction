@@ -21,6 +21,11 @@ void QFractionTest::testCreatePositiveReal()
 
     QCOMPARE(fraction.getNumerator(), 3);
     QCOMPARE(fraction.getDenominator(), 4);
+
+    fraction = Fraction(2.3);
+
+    QCOMPARE(fraction.getNumerator(), 23);
+    QCOMPARE(fraction.getDenominator(), 10);
 }
 
 void QFractionTest::testBinaryOneAddHalf()
@@ -333,5 +338,37 @@ void QFractionTest::testIntegerDivideFraction()
     Fraction result = 1 / fraction;
 
     QCOMPARE(result, Fraction(2, 1));
+}
+
+void QFractionTest::testRealAddFraction()
+{
+    Fraction fraction = Fraction (1, 2);
+    Fraction result = 2.3 + fraction;
+
+    QCOMPARE(result,  Fraction(14, 5));
+}
+
+void QFractionTest::testRealSubtractFraction()
+{
+    Fraction fraction = Fraction (1, 2);
+    Fraction result = 2.3 - fraction;
+
+    QCOMPARE(result,  Fraction(9, 5));
+}
+
+void QFractionTest::testRealMultiplyFraction()
+{
+    Fraction fraction = Fraction (1, 2);
+    Fraction result = 2.3 * fraction;
+
+    QCOMPARE(result,  Fraction(23, 20));
+}
+
+void QFractionTest::testRealDivideFraction()
+{
+    Fraction fraction = Fraction (1, 2);
+    Fraction result = 2.3 / fraction;
+
+    QCOMPARE(result,  Fraction(23, 5));
 }
 

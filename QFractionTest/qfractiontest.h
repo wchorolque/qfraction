@@ -50,6 +50,11 @@ private Q_SLOTS:
     void testIntegerSubtractFraction();
     void testIntegerMultiplyFraction();
     void testIntegerDivideFraction();
+
+    void testRealAddFraction();
+    void testRealSubtractFraction();
+    void testRealMultiplyFraction();
+    void testRealDivideFraction();
 };
 
 #endif // QFRACTIONTEST_H

@@ -249,3 +249,36 @@ Fraction operator /(qint32 number, const Fraction &f)
 
     return (fraction /= f);
 }
+
+
+Fraction operator +(qreal number, const Fraction &f)
+{
+    Fraction fraction = Fraction(number);
+    fraction += f;
+
+    return fraction;
+}
+
+Fraction operator -(qreal number, const Fraction &f)
+{
+    Fraction fraction = Fraction(number);
+    fraction -= f;
+
+    return fraction;
+}
+
+Fraction operator *(qreal number, const Fraction &f)
+{
+    Fraction fraction = Fraction(number);
+    fraction *= f;
+
+    return fraction;
+}
+
+Fraction operator /(qreal number, const Fraction &f)
+{
+    Fraction fraction = Fraction(number);
+    fraction /= f;
+
+    return fraction;
+}

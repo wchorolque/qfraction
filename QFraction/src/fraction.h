@@ -48,6 +48,11 @@ public:
     friend Fraction operator -(qint32 number, const Fraction& f);
     friend Fraction operator *(qint32 number, const Fraction& f);
     friend Fraction operator /(qint32 number, const Fraction& f);
+
+    friend Fraction operator +(qreal number, const Fraction& f);
+    friend Fraction operator -(qreal number, const Fraction& f);
+    friend Fraction operator *(qreal number, const Fraction& f);
+    friend Fraction operator /(qreal number, const Fraction& f);
 };
 
 #endif // FRACTION_H

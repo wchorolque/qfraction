@@ -30,7 +30,7 @@ quint32 QMathUtil::countDecimals(qreal &number)
 {
     qint32 decimals = 0;
 
-    while ((number- (qint32)number) != 0) {
+    while ((number - (qint32)number) != 0) {
         number *= 10;
         decimals++;
     }
