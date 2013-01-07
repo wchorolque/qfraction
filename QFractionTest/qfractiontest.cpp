@@ -295,3 +295,35 @@ void QFractionTest::testNotEqual()
     QVERIFY(fraction1 != fraction2);
 }
 
+void QFractionTest::testIntegerAddFraction()
+{
+    Fraction fraction = Fraction (1,2);
+    Fraction result = 1 + fraction;
+
+    QCOMPARE(result, Fraction(3, 2));
+}
+
+void QFractionTest::testIntegerSubtractFraction()
+{
+    Fraction fraction = Fraction (1,2);
+    Fraction result = 1 - fraction;
+
+    QCOMPARE(result, Fraction(1, 2));
+}
+
+void QFractionTest::testIntegerMultiplyFraction()
+{
+    Fraction fraction = Fraction (1,2);
+    Fraction result = 1 * fraction;
+
+    QCOMPARE(result, Fraction(1, 2));
+}
+
+void QFractionTest::testIntegerDivideFraction()
+{
+    Fraction fraction = Fraction (1,2);
+    Fraction result = 1 / fraction;
+
+    QCOMPARE(result, Fraction(2, 1));
+}
+

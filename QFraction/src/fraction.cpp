@@ -209,3 +209,31 @@ Fraction operator /(const Fraction &f1, const Fraction &f2)
     return f;
 }
 
+
+Fraction operator +(qint32 number, const Fraction &f)
+{
+    Fraction fraction(number);
+
+    return (fraction += f);
+}
+
+Fraction operator -(qint32 number, const Fraction &f)
+{
+    Fraction fraction(number);
+
+    return (fraction -= f);
+}
+
+Fraction operator *(qint32 number, const Fraction &f)
+{
+    Fraction fraction(number);
+
+    return (fraction *= f);
+}
+
+Fraction operator /(qint32 number, const Fraction &f)
+{
+    Fraction fraction(number);
+
+    return (fraction /= f);
+}

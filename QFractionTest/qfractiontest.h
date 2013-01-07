@@ -44,6 +44,11 @@ private Q_SLOTS:
 
     void testEqual();
     void testNotEqual();
+
+    void testIntegerAddFraction();
+    void testIntegerSubtractFraction();
+    void testIntegerMultiplyFraction();
+    void testIntegerDivideFraction();
 };
 
 #endif // QFRACTIONTEST_H

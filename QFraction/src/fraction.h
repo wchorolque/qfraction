@@ -33,6 +33,7 @@ public:
     Fraction& operator *=(qint32 number);
     Fraction& operator /=(qint32 number);
 
+
     bool operator ==(const Fraction& f) const;
     bool operator !=(const Fraction& f) const;
 
@@ -41,6 +42,11 @@ public:
     friend Fraction operator -(const Fraction& f1, const Fraction& f2);
     friend Fraction operator *(const Fraction& f1, const Fraction& f2);
     friend Fraction operator /(const Fraction& f1, const Fraction& f2);
+
+    friend Fraction operator +(qint32 number, const Fraction& f);
+    friend Fraction operator -(qint32 number, const Fraction& f);
+    friend Fraction operator *(qint32 number, const Fraction& f);
+    friend Fraction operator /(qint32 number, const Fraction& f);
 };
 
 #endif // FRACTION_H
