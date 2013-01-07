@@ -21,6 +21,18 @@ Fraction::Fraction(qint32 numerator, qint32 denominator)
     reduce();
 }
 
+Fraction::Fraction(qreal number)
+{
+    qint32 decimals = QMathUtil::countDecimals(number);
+    qint32 numerator = (qint32)number;
+    qint32 denominador = (qint32)pow(10, decimals);
+
+    this->m_Numerator = numerator;
+    this->m_Denominator = denominador;
+
+    reduce();
+}
+
 Fraction::~Fraction()
 {
 }

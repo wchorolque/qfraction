@@ -13,6 +13,7 @@ public:
 
 private Q_SLOTS:
     void testCreate();
+    void testCreatePositiveReal();
 
     void testBinaryOneAddHalf();
     void testBinaryZeroAddHalf();

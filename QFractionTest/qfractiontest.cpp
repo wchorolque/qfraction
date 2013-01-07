@@ -15,6 +15,14 @@ void QFractionTest::testCreate()
     QCOMPARE(fraction.getDenominator(), 1);
 }
 
+void QFractionTest::testCreatePositiveReal()
+{
+    Fraction fraction = Fraction(0.75);
+
+    QCOMPARE(fraction.getNumerator(), 3);
+    QCOMPARE(fraction.getDenominator(), 4);
+}
+
 void QFractionTest::testBinaryOneAddHalf()
 {
     Fraction fraction1 = Fraction(1);

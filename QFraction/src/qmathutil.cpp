@@ -25,3 +25,15 @@ qint32 QMathUtil::calculateMCM(qint32 number1, qint32 number2)
 
     return mcm;
 }
+
+quint32 QMathUtil::countDecimals(qreal &number)
+{
+    qint32 decimals = 0;
+
+    while ((number- (qint32)number) != 0) {
+        number *= 10;
+        decimals++;
+    }
+
+    return decimals;
+}

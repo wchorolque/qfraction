@@ -9,6 +9,7 @@ public:
     QMathUtil();
     static qint32 calculateMCD(qint32 number1, qint32 number2 = 1);
     static qint32 calculateMCM(qint32 number1, qint32 number2);
+    static quint32 countDecimals(qreal& number);
 };
 
 #endif // QMATHUTIL_H

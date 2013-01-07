@@ -14,6 +14,7 @@ public:
 private Q_SLOTS:
     void testMCD();
     void testMCM();
+    void testCountDecimals();
 };
 
 #endif // QMATHUTILTEST_H

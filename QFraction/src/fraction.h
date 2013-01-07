@@ -15,6 +15,7 @@ private:
     void reduce();
 public:
     Fraction(qint32 numerator=0, qint32 denominator=1);
+    Fraction(qreal number);
     ~Fraction();
 
     void setNumerator(qint32 numerator);

@@ -20,3 +20,12 @@ void QMathUtilTest::testMCM()
     QCOMPARE(QMathUtil::calculateMCM(7, 13), 91);
 }
 
+void QMathUtilTest::testCountDecimals()
+{
+    qreal number = 0.75;
+    qint32 decimals = QMathUtil::countDecimals(number);
+
+    QCOMPARE(decimals, 2);
+    QCOMPARE(number, 75.0);
+}
+
